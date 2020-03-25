@@ -30,7 +30,7 @@ Page({
       pageSize: 20
     }
     let that = this
-    http.GET('https://interface.365som.com/baiduminipro_m/Handler.ashx', data, res => {
+    http.GET(app.getUrl('Handler.ashx'), data, res => {
       wx.stopPullDownRefresh() //停止下拉刷新
       console.log(res)
       var productList = res.data.Types.ProductList

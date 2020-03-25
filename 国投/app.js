@@ -5,7 +5,10 @@ App({
   onLaunch: function () {
     
   },
+  getUrl: function (model) {
+    return this.globalData.domainUrl + model
+  },
   globalData: {
-    userInfo: null
+    domainUrl: 'https://interface.365som.com/baiduminipro_m/',
   }
 })
