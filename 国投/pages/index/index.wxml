@@ -1,0 +1,16 @@
+<import src="../../template/topLine.wxml" />
+<import src="../../template/loadMore.wxml" />
+
+<template is='topLine' />
+<view class="container">
+  <view class="product-list">
+    <view class="product" wx:for='{{productList}}' wx:key='ProductID'>
+      <image class="product-image" src="{{item.ProductImage}}"></image>
+      <view class="product-right">
+        <view class="product-name">{{item.ProductName}}</view>
+        <view class="product-price"><em>￥</em>{{item.ProductPrice}}</view>
+      </view>
+    </view>
+  </view>
+<template is='loadMore' data="{{noData,noMoreData}}" />  
+</view>

@@ -1,0 +1,6 @@
+.loadmore {
+  width: 450rpx;
+  margin: 32rpx 150rpx;
+  font-size: 34rpx;
+  text-align: center;
+}

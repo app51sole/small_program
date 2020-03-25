@@ -1,0 +1,4 @@
+<template name='loadMore'>
+  <view class="loadmore" hidden="{{noData}}">{{noMoreData?'~ 已经到底了 ~':'正在加载...'}}</view>
+</template>
+

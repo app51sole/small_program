@@ -1,0 +1,3 @@
+<template name='topLine'>
+  <view class='top-line'></view>
+</template>
