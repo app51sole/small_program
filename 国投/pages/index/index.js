@@ -29,7 +29,7 @@ Page({
       Method: 'GetProductListByIndustry',
       SmallIndustryId: 1,
       pageIndex: this.data.pageIndex,
-      pageSize: 20
+      pageSize: this.data.pageSize
     }
     let that = this
     app.GET(app.getUrl('Handler.ashx'), data, res => {

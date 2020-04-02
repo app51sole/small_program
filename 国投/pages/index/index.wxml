@@ -14,5 +14,5 @@
 		</view>
 	</view>
 	<template is='loadMore' data="{{noData,noMoreData}}" />
-	<template is='noData' data="{{noData,noDataTitle}}" />
+	<template is='noData' data="{{noData,noDataTitle,noDataImage}}" />
 </view>

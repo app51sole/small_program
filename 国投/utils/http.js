@@ -1,4 +1,13 @@
 const request = (method, url, data, response, error) => {
+  var urlStr = url
+  if (urlStr.substr(urlStr.length - 1, 1) != '?') {
+    urlStr = urlStr + '?'
+  }
+  for (var key in data) {
+    urlStr = urlStr + key + '=' + data[key] + '&'
+  }
+  urlStr = urlStr.substr(0, urlStr.length - 1)
+  console.log(urlStr)
   wx.showNavigationBarLoading()
   wx.request({
     method: method,
