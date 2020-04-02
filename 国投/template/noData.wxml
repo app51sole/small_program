@@ -1,0 +1,6 @@
+<template name="noData">
+  <view class='no-data-container' wx:if="{{noData}}">
+    <image class='image-no-data' src='/images/no_data.png'></image>
+    <text class='text-no-data'>{{noDataTitle!=undefined?noDataTitle:"暂无数据"}}</text>
+  </view>
+</template>

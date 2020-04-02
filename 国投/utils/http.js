@@ -1,14 +1,5 @@
 const request = (method, url, data, response, error) => {
-  // if (hasClick) {
-  //   return
-  // }
-  // hasClick = true
-
-  // wx.showLoading({
-  //   title: '加载中...',
-  //   mask: true
-  // })
-
+  wx.showNavigationBarLoading()
   wx.request({
     method: method,
     url: url,
@@ -23,8 +14,7 @@ const request = (method, url, data, response, error) => {
       return error(err)
     },
     complete: info => {
-      wx.hideLoading();
-      // hasClick = false
+      wx.hideNavigationBarLoading();
     }
   })
 }

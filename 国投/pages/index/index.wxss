@@ -1,5 +1,6 @@
 @import "../../template/topLine.wxss";
 @import "../../template/loadMore.wxss";
+@import "../../template/noData.wxss";
 
 .product {
   width: 690rpx;

@@ -1,5 +1,5 @@
 //index.js
-import http from '../../utils/http.js'
+
 //获取应用实例
 const app = getApp()
 
@@ -12,6 +12,8 @@ Page({
     productList: [],
     pageIndex: 1,
     pageSize: 20,
+    noData: false,
+    noDataTitle: '不好意思，暂无数据',
     noMoreData: false
   },
 
@@ -33,13 +35,13 @@ Page({
     app.GET(app.getUrl('Handler.ashx'), data, res => {
       wx.stopPullDownRefresh() //停止下拉刷新
       console.log(res)
-      var productList = res.data.Types.ProductList
+      var productList = []//res.data.Types.ProductList
       var plist = that.data.pageIndex == 1 ? [] : that.data.productList
       plist = plist.concat(productList)
       that.setData({
         productList: plist,
-        noMoreData: productList.length < that.data.pageSize || that.data.pageIndex == 2,
-        noData: that.data.pageIndex == 1 && productList.length === 0
+        noData: that.data.pageIndex == 1 && productList.length === 0,
+        noMoreData: productList.length < that.data.pageSize || that.data.pageIndex == 2
       })
     }, error => {
       console.log(error)

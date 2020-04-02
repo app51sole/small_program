@@ -3,7 +3,11 @@ import http from '/utils/http.js'
 
 App({
   onLaunch: function () {
-    
+    wx.login({
+      success(res) {
+        console.log(res)
+      }
+    })
   },
   getUrl: function (model) {
     return this.globalData.domainUrl + model
@@ -13,6 +17,12 @@ App({
   },
   POST: function (url, data, response, error) {
     http.POST(url, data, response, error)
+  },
+  onHide: function () {
+    console.log('进入后台')
+  },
+  onShow: function () {
+    console.log('进入前台')
   },
   globalData: {
     domainUrl: 'https://interface.365som.com/baiduminipro_m/',
