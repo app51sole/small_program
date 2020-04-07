@@ -1,6 +1,7 @@
 .loadmore {
   width: 450rpx;
   margin: 32rpx 150rpx;
-  font-size: 34rpx;
+  font-size: 30rpx;
+  color: #555;
   text-align: center;
 }
