@@ -1,4 +1,7 @@
 <template name='loadMore'>
-  <view class="loadmore" hidden="{{noData}}">{{noMoreData?'~ 已经到底了 ~':'正在加载...'}}</view>
+  <view class="loadmore-back">
+    <image src="/images/loading.png" hidden="{{noMoreData}}"></image>
+    <view class="loadmore" hidden="{{noData}}">{{noMoreData?'~ 已经到底了 ~':'正在加载...'}}</view>
+  </view>
 </template>
 

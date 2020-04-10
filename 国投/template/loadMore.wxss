@@ -1,7 +1,30 @@
+.loadmore-back {
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadmore-back image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 20rpx;
+  animation: cuIcon-spin 3s infinite linear;
+}
+
+@keyframes cuIcon-spin {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+
+	100% {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+
 .loadmore {
-  width: 450rpx;
-  margin: 32rpx 150rpx;
   font-size: 30rpx;
   color: #555;
-  text-align: center;
 }
