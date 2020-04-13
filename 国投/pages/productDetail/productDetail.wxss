@@ -1,0 +1,5 @@
+.desc-back {
+  padding: 30rpx;
+  line-height: 60rpx;
+  background-color: white;
+}

@@ -7,3 +7,15 @@
   justify-content: space-between;
   box-sizing: border-box;
 } 
+
+.font-s {
+  font-size: 28rpx;
+}
+
+.font-m {
+  font-size: 30rpx;
+}
+
+.font-b {
+  font-size: 32rpx;
+}

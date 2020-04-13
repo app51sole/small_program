@@ -21,6 +21,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    wx.getSystemInfo({
+      complete: (res) => {
+        console.log(res)
+      },
+    })
     this.requestInfo()
   },
 
@@ -45,6 +50,13 @@ Page({
       })
     }, error => {
       console.log(error)
+    })
+  },
+
+  enterDetail: function (e) {
+    console.log(e.currentTarget.id)
+    wx.navigateTo({
+      url: '/pages/productDetail/productDetail?productID=' + e.currentTarget.id,
     })
   },
 

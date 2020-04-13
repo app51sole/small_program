@@ -11,12 +11,12 @@
 }
 
 .image-no-data {
-  width: 250rpx;
-  height: 250rpx;
+  width: 300rpx;
+  height: 300rpx;
 }
 
 .text-no-data {
   color: gray;
-  font-size: 32rpx;
+  font-size: 15px;
   margin-top: 30rpx;
 }

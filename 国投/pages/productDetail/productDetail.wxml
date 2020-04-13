@@ -1,0 +1,3 @@
+<view class="desc-back font-m">
+	<parser html="{{description}}" selectable='true' />
+</view>

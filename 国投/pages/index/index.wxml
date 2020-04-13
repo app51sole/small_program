@@ -5,10 +5,10 @@
 <template is='topLine' />
 <view class="container">
 	<view class="product-list">
-		<view class="product" wx:for='{{productList}}' wx:key='ProductID'>
+		<view id="{{item.ProductID}}" class="product" wx:for='{{productList}}' wx:key='ProductID' bindtap="enterDetail">
 			<image class="product-image" src="{{item.ProductImage}}"></image>
 			<view class="product-right">
-				<view class="product-name">{{item.ProductName}}</view>
+				<text class="product-name font-b">{{item.ProductName}}</text>
 				<view class="product-price"><em>￥</em>{{item.ProductPrice}}</view>
 			</view>
 		</view>

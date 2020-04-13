@@ -1,7 +1,15 @@
 /* pages/mine/mine.wxss */
 .test-view {
-  width: 100%;
-  height: 200rpx;
+  width: 690rpx;
+  height: 700rpx;
   padding: 30rpx;
+  background-color: #eee;
+}
+
+text {
+  text-align: justify;
+  width: 100%;
+  display: inline-block;
   background-color: red;
+  word-break: break-all;
 }

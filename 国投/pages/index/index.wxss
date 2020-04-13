@@ -17,7 +17,6 @@
 
 .product-name {
   width: 460rpx;
-  font-size: 34rpx;
   margin-bottom: 30rpx;
   text-overflow: -o-ellipsis-lastline;
   overflow: hidden;
