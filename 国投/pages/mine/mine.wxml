@@ -1,4 +1,6 @@
-<!--pages/mine/mine.wxml-->
-<view class="test-view" bindtap="tap">
-  <text>【温馨提示】即速应用倡导尊重与保护知识产权。如发现本站文章存在版权问题，烦请提供版权疑问、身份证明、版权证明、联系方式等发邮件至1223636800@qq.com ，我们将及时处理。本站文章仅作分享交流用途，作者观点不等同于即速应用观点。用户与作者的任何交易与本站无关，请知悉。</text>
-</view>
+<view class="top" style="opacity:{{currentOpacity}}"></view>
+<block wx:for='{{array}}'>
+  <view class='color'></view>
+</block>
+
+

@@ -9,6 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showSkeleton: true,
     productList: [],
     pageIndex: 1,
     pageSize: 20,
@@ -20,7 +21,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     wx.getSystemInfo({
       complete: (res) => {
         console.log(res)
@@ -29,7 +30,7 @@ Page({
     this.requestInfo()
   },
 
-  requestInfo: function() {
+  requestInfo: function () {
     let data = {
       Method: 'GetProductListByIndustry',
       SmallIndustryId: 1,
@@ -44,9 +45,10 @@ Page({
       var plist = that.data.pageIndex == 1 ? [] : that.data.productList
       plist = plist.concat(productList)
       that.setData({
+        showSkeleton: false,
         productList: plist,
         noData: that.data.pageIndex == 1 && productList.length === 0,
-        noMoreData: productList.length < that.data.pageSize || that.data.pageIndex == 4
+        noMoreData: productList.length < that.data.pageSize || that.data.pageIndex == 2
       })
     }, error => {
       console.log(error)
@@ -63,35 +65,35 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
     this.data.pageIndex = 1
     this.requestInfo()
   },
@@ -99,7 +101,7 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
     if (!this.data.noMoreData) {
       this.data.pageIndex = this.data.pageIndex + 1
       this.requestInfo()
@@ -109,7 +111,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })

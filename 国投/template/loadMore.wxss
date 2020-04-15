@@ -11,6 +11,31 @@
 }
 
 .loading {
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 20rpx;
+}
+.loading:after {
+  content: " ";
+  display: block;
+  width: 36rpx;
+  height: 36rpx;
+  margin: 1rpx;
+  border-radius: 50%;
+  border: 5rpx solid #666;
+  border-color: #666 transparent #666 transparent;
+  animation: spin 1.2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .loading {
   margin-right: 20rpx;
   width: 20px;
   height: 20px;
@@ -44,4 +69,4 @@
     -webkit-transform: rotate(1turn);
     transform: rotate(1turn)
   }
-}
+} */

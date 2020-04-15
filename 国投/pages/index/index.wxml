@@ -2,14 +2,19 @@
 <import src="../../template/loadMore.wxml" />
 <import src="../../template/noData.wxml" />
 
+<skeleton selector="skeleton"
+          loading="spin"
+          bgcolor="#FFF"
+          wx:if="{{showSkeleton}}"></skeleton>
+
 <template is='topLine' />
-<view class="container">
+<view class="container skeleton">
 	<view class="product-list">
-		<view id="{{item.ProductID}}" class="product" wx:for='{{productList}}' wx:key='ProductID' bindtap="enterDetail">
-			<image class="product-image" src="{{item.ProductImage}}"></image>
+		<view id="{{item.ProductID}}" class="product" wx:for='{{showSkeleton?[1,2,3,4,5]:productList}}' wx:key='ProductID' bindtap="enterDetail">
+			<image class="product-image skeleton-rect" src="{{item.ProductImage}}"></image>
 			<view class="product-right">
-				<text class="product-name font-b">{{item.ProductName}}</text>
-				<view class="product-price"><em>￥</em>{{item.ProductPrice}}</view>
+				<text class="product-name font-b skeleton-rect">{{item.ProductName}}</text>
+				<view class="product-price skeleton-rect"><em>￥</em>{{item.ProductPrice}}</view>
 			</view>
 		</view>
 	</view>

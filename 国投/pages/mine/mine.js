@@ -5,28 +5,44 @@ Page({
    * 页面的初始数据
    */
   data: {
-
-  },
-
-  tap: function () {
-    wx.checkSession({
-      success() {
-        //session_key 未过期，并且在本生命周期一直有效
-        console.log('session_key 未过期，并且在本生命周期一直有效')
-      },
-      fail() {
-        // session_key 已经失效，需要重新执行登录流程
-        console.log('session_key 已经失效，需要重新执行登录流程')
-        wx.login() //重新登录
-      }
-    })
+    array: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+    currentOpacity: 0,
+    number: 10,
+    timeID: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+     this.xunhuan()
+  },
 
+  xunhuan: function () {
+    var that = this
+    this.data.timeID = setTimeout(function() {
+      that.dayin()
+    }, 1000)
+    console.log('num = ' + this.data.timeID)
+  },
+
+  dayin: function () {
+    console.log(this.data.number)
+    this.data.number--
+    if (this.data.number >= 0) {
+      this.xunhuan()
+    } else {
+      console.log('循环结束')
+    }
+    
+  },
+
+  onPageScroll: function (e) {
+    console.log(e)
+    this.setData({
+      currentOpacity: e.scrollTop / 128
+    })
+    clearTimeout(this.data.timeID)
   },
 
   /**

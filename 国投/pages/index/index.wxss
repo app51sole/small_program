@@ -17,6 +17,7 @@
 
 .product-name {
   width: 460rpx;
+  min-height: 60rpx;
   margin-bottom: 30rpx;
   text-overflow: -o-ellipsis-lastline;
   overflow: hidden;
@@ -27,6 +28,7 @@
 }
 
 .product-price {
+  width: 50%;
   color: red;
   font-size: 40rpx;
 }
