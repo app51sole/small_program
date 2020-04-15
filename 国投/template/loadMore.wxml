@@ -1,6 +1,6 @@
 <template name='loadMore'>
   <view class="loadmore-back">
-    <view class="loading" hidden="{{!noMoreData}}"></view>
+    <view class="loading" hidden="{{noMoreData}}"></view>
     <view class="loadmore" hidden="{{noData}}">{{noMoreData?'~ 已经到底了 ~':'正在加载...'}}</view>
   </view>
 </template>

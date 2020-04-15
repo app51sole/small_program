@@ -10,10 +10,10 @@
 
     </view>
 
-    <view class="spinbox" wx:if="{{loading == 'spin'}}">
+    <!-- <view class="spinbox" wx:if="{{loading == 'spin'}}">
         <view class="spin"></view>
 
-    </view>
+    </view> -->
 
 
 </view>
