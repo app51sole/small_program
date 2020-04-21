@@ -4,6 +4,10 @@ Component({
 			type: String,
 			value: '#FFF'
 		},
+		skeletoncolor: {
+			type: String,
+			value: '#F2F2F2'
+		},
 		selector: {
 			type: String,
 			value: 'skeleton'

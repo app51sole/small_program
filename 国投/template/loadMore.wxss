@@ -10,20 +10,21 @@
   color: #555;
 }
 
-.loading {
+.loading1 {
   width: 44rpx;
   height: 44rpx;
   margin-right: 20rpx;
 }
-.loading:after {
+
+.loading1:after {
   content: " ";
   display: block;
   width: 36rpx;
   height: 36rpx;
   margin: 1rpx;
   border-radius: 50%;
-  border: 5rpx solid #666;
-  border-color: #666 transparent #666 transparent;
+  border: 5rpx solid #888;
+  border-color: #888 transparent #888 transparent;
   animation: spin 1.2s linear infinite;
 }
 @keyframes spin {
@@ -35,7 +36,7 @@
   }
 }
 
-/* .loading {
+.loading2 {
   margin-right: 20rpx;
   width: 20px;
   height: 20px;
@@ -69,4 +70,4 @@
     -webkit-transform: rotate(1turn);
     transform: rotate(1turn)
   }
-} */
+}

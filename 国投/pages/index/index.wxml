@@ -3,7 +3,7 @@
 <import src="../../template/noData.wxml" />
 
 <skeleton selector="skeleton"
-          loading="spin"
+          loading="chiaroscuro"
           bgcolor="#FFF"
           wx:if="{{showSkeleton}}"></skeleton>
 

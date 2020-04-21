@@ -1,6 +1,6 @@
 <view class="top" style="opacity:{{currentOpacity}}"></view>
 <block wx:for='{{array}}'>
-  <view class='color'></view>
+  <view class='color' style="background-color:{{index%2==0?'#eee':'#e0e0e0'}}"></view>
 </block>
 
 

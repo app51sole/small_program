@@ -27,6 +27,16 @@
   -webkit-box-orient: vertical;
 }
 
+.product-name::before {
+  content: "工业品";
+  color: white;
+  background-color: red;
+  font-size: 10px;
+  border-radius: 5rpx;
+  padding: 0 8rpx;
+  margin-right: 8rpx;
+}
+
 .product-price {
   width: 50%;
   color: red;

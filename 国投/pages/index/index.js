@@ -44,12 +44,15 @@ Page({
       var productList = res.data.Types.ProductList
       var plist = that.data.pageIndex == 1 ? [] : that.data.productList
       plist = plist.concat(productList)
-      that.setData({
-        showSkeleton: false,
-        productList: plist,
-        noData: that.data.pageIndex == 1 && productList.length === 0,
-        noMoreData: productList.length < that.data.pageSize || that.data.pageIndex == 2
-      })
+      setTimeout(() => {
+        that.setData({
+          showSkeleton: false,
+          productList: plist,
+          noData: that.data.pageIndex == 1 && productList.length === 0,
+          noMoreData: productList.length < that.data.pageSize || that.data.pageIndex == 2
+        })
+      }, 1000);
+      
     }, error => {
       console.log(error)
     })

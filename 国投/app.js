@@ -8,6 +8,9 @@ App({
         console.log(res)
       }
     })
+    wx.requestSubscribeMessage({
+      tmplIds: [],
+    })
   },
   getUrl: function (model) {
     return this.globalData.domainUrl + model

@@ -2,11 +2,11 @@
 <view style="width: {{systemInfo.width}}px; height: {{systemInfo.height}}px; background-color: {{bgcolor}}; position: absolute; left:0; top:0; z-index:9998; overflow: hidden;">
 
     <view wx:for="{{skeletonRectLists}}" wx:key="{{index}}" class="{{loading == 'chiaroscuro' ? 'chiaroscuro' : ''}}"
-          style="width: {{item.dataset.sWidth || item.width}}{{unit}}; height: {{item.dataset.sHeight || item.height}}{{unit}}; background-color: #eee; position: absolute; left: {{item.left}}px; top: {{item.top}}px">
+          style="width: {{item.dataset.sWidth || item.width}}{{unit}}; height: {{item.dataset.sHeight || item.height}}{{unit}}; background-color: {{skeletoncolor}}; position: absolute; left: {{item.left}}px; top: {{item.top}}px">
 
     </view>
     <view wx:for="{{skeletonCircleLists}}" wx:key="{{index}}" class="{{loading == 'chiaroscuro' ? 'chiaroscuro' : ''}}"
-          style="width: {{item.width}}{{unit}}; height: {{item.height}}{{unit}}; background-color: #eee; border-radius: {{item.width}}{{unit}}; position: absolute; left: {{item.left}}px; top: {{item.top}}px">
+          style="width: {{item.width}}{{unit}}; height: {{item.height}}{{unit}}; background-color: {{skeletoncolor}}; border-radius: {{item.width}}{{unit}}; position: absolute; left: {{item.left}}px; top: {{item.top}}px">
 
     </view>
 

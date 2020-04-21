@@ -43,13 +43,13 @@
 
 @keyframes blink {
   0% {
-    opacity: .4;
+    opacity: .6;
   }
   50% {
     opacity: 1;
   }
   100% {
-    opacity: .4;
+    opacity: .6;
   }
 }
 
